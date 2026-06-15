@@ -1,5 +1,7 @@
 from ex0.creature import Creature
+
 from .capabilities import HealCapability, TransformCapability
+
 
 class Sproutling(Creature, HealCapability):
     def __init__(self) -> None:
@@ -11,6 +13,7 @@ class Sproutling(Creature, HealCapability):
     def heal(self) -> str:
         return f"{self.name} heals itself for a small amount"
 
+
 class Bloomelle(Creature, HealCapability):
     def __init__(self) -> None:
         super().__init__("Bloomelle", "Grass/Fairy")
@@ -20,6 +23,7 @@ class Bloomelle(Creature, HealCapability):
 
     def heal(self) -> str:
         return f"{self.name} heals itself and others for a large amount"
+
 
 class Shiftling(Creature, TransformCapability):
     def __init__(self) -> None:
@@ -38,6 +42,7 @@ class Shiftling(Creature, TransformCapability):
         if self.is_transformed:
             return f"{self.name} performs a boosted strike!"
         return f"{self.name} attacks normally."
+
 
 class Morphagon(Creature, TransformCapability):
     def __init__(self) -> None:
