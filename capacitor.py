@@ -8,7 +8,7 @@ from ex1 import (
 
 def test_healing_factory(factory: HealingCreatureFactory) -> None:
     print("Testing Creature with healing capability")
-    print("base")
+    print("base:")
     base = factory.create_base()
     print(base.describe())
     print(base.attack())
